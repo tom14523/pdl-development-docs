@@ -12,6 +12,7 @@ serve-book:
   stage: build
   script:
     - gitbook build
+    - cd docker
     - docker build -t registry-internal.cn-beijing.aliyuncs.com/htouhui/$PROJECT_NAME:$CI_BUILD_REF_SLUG .
     - docker stop $PROJECT_NAME-$CI_BUILD_REF_SLUG || true
     - docker rm -f $PROJECT_NAME-$CI_BUILD_REF_SLUG || true
