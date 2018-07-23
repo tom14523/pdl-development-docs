@@ -6,5 +6,5 @@ serve-book:
   stage: build
   script:
     - gitbook build
-    - killall -9 node
-    - gitbook serve &
+    - killall -9 node || true
+    - nohup gitbook serve &
