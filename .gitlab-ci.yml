@@ -31,4 +31,4 @@ publish_book:
   script:
     - cd book
     - gitbook build
-    - ossutil cp -r _book oss://htouhui-dev-docs/docs
+    - ossutil cp -r -f _book oss://htouhui-dev-docs/docs
