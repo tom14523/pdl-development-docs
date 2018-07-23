@@ -11,10 +11,12 @@ variables:
 serve-book:
   stage: build
   script:
+    - cd book
     - gitbook build
+    - cd ..
     - rm -rf target
     - cp -R docker target
-    - mv _book target/
+    - mv book/_book target/
     - cd target
     - docker build -t registry-internal.cn-beijing.aliyuncs.com/htouhui/$PROJECT_NAME:$CI_BUILD_REF_SLUG .
     - docker stop $PROJECT_NAME-$CI_BUILD_REF_SLUG || true
@@ -27,5 +29,6 @@ publish_book:
     GIT_STRATEGY: none
   when: manual
   script:
+    - cd book
     - gitbook build
-    - ossutil cp -r _book oss://htouhui-dev-docs
+    - ossutil cp -r _book oss://htouhui-dev-docs/docs
