@@ -1,0 +1,8 @@
+stages:
+  - build
+  - deploy
+
+serve-book:
+  stage: build
+  script:
+    - gitbook serve
