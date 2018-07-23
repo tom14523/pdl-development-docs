@@ -12,6 +12,7 @@ serve-book:
   stage: build
   script:
     - cd book
+    - gitbook install
     - gitbook build
     - cd ..
     - rm -rf target
@@ -30,5 +31,6 @@ publish_book:
   when: manual
   script:
     - cd book
+    - gitbook install
     - gitbook build
     - ossutil cp -r -f _book oss://htouhui-dev-docs/docs
