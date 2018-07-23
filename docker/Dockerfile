@@ -1,5 +1,5 @@
 FROM centos:7
-MAINTAINER hongxing<xing.hong@htouhui.com>
+LABEL maintainer="xing.hong@htouhui.com"
 
 ARG PUBLISH_VERSION
 
