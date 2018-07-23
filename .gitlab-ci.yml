@@ -2,9 +2,18 @@ stages:
   - build
   - deploy
 
+variables:
+  PROJECT_NAME: "htouhui-development-docs"
+  PROJECT_GROUP_NAME: "htouhui_projects"
+  DOCKER_IP_TEST_SERVER: "10.171.54.98"
+  GITLAB_IP: "123.57.8.180"
+
 serve-book:
   stage: build
   script:
     - gitbook build
-    - killall -9 node || true
-    - nohup gitbook serve &
+    - docker build -t registry-internal.cn-beijing.aliyuncs.com/htouhui/$PROJECT_NAME:$CI_BUILD_REF_SLUG .
+    - docker stop $PROJECT_NAME-$CI_BUILD_REF_SLUG || true
+    - docker rm -f $PROJECT_NAME-$CI_BUILD_REF_SLUG || true
+    - docker run -d -p 4000:80 --name $PROJECT_NAME-$CI_BUILD_REF_SLUG -t registry-internal.cn-beijing.aliyuncs.com/htouhui/$PROJECT_NAME:$CI_BUILD_REF_SLUG
+    
