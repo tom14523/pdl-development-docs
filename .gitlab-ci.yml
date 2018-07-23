@@ -20,4 +20,12 @@ serve-book:
     - docker stop $PROJECT_NAME-$CI_BUILD_REF_SLUG || true
     - docker rm -f $PROJECT_NAME-$CI_BUILD_REF_SLUG || true
     - docker run -d -p 4000:80 --name $PROJECT_NAME-$CI_BUILD_REF_SLUG -t registry-internal.cn-beijing.aliyuncs.com/htouhui/$PROJECT_NAME:$CI_BUILD_REF_SLUG
-    
+
+publish_book:
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+  when: manual
+  script:
+    - gitbook build
+    - ossutil cp -r _book oss://htouhui-dev-docs
