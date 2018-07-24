@@ -1,3 +1,5 @@
 {
+  "title": "海投汇开发者文档",
+  "author": "海投汇",
   "plugins": ["mermaid-gb3"]
 }
