@@ -1,1 +1,1 @@
-*海投汇版权所有 (https://htouhui.com)*
+*海投汇(https://htouhui.com)版权所有 © 2018*
