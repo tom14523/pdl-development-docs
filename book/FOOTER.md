@@ -1,1 +1,1 @@
-*海投汇(https://htouhui.com)版权所有 © 2018*
+*[北京冠城瑞富信息技术有限公司](https://htouhui.com)版权所有 © 2018*
