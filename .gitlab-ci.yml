@@ -3,8 +3,8 @@ stages:
   - deploy
 
 variables:
-  PROJECT_NAME: "htouhui-development-docs"
-  PROJECT_GROUP_NAME: "htouhui_projects"
+  PROJECT_NAME: ${CI_PROJECT_NAME}
+  PROJECT_GROUP_NAME: ${CI_PROJECT_NAMESPACE}
   DOCKER_IP_TEST_SERVER: "10.171.54.98"
   GITLAB_IP: "123.57.8.180"
 
