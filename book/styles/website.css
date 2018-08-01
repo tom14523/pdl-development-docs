@@ -1,3 +1,18 @@
 .markdown-section table td {
     font-size: 12px;
 }
+
+a.gitbook-link:before {
+    content: '海投汇技术团队维护';
+}
+
+a.gitbook-link:after {
+    position: absolute;
+    top: 0px;
+    left: 145px;
+    display: block;
+    content: '';
+    width: 200px;
+    height: 30px;
+    background: #F9FAF9;
+}
