@@ -2,17 +2,12 @@
     font-size: 12px;
 }
 
-a.gitbook-link:before {
+ul.summary:after {
+    display: block;
     content: '海投汇技术团队维护';
+    padding: 10px 15px;
 }
 
-a.gitbook-link:after {
-    position: absolute;
-    top: 0px;
-    left: 145px;
-    display: block;
-    content: '';
-    width: 200px;
-    height: 30px;
-    background: #F9FAF9;
+ul.summary > li:last-child {
+    display: none;
 }
