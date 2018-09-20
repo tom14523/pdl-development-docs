@@ -12,6 +12,7 @@ serve-book:
   stage: build
   script:
     - cd book
+    - rm -rf _book/
     - gitbook install
     - gitbook build
     - cd ..
