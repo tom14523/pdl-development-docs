@@ -1,9 +1,40 @@
 {
   "title": "海投汇开发者文档",
   "author": "海投汇",
-  "plugins": ["mermaid-gb3", "localized-footer"],
+  "plugins": [
+		"fontsettings",
+		"mermaid-gb3", 
+		"localized-footer", 
+		"toggle-chapters", 
+		"-search",
+    "search-pro",
+		"advanced-emoji",
+		"emphasize",
+		"ace",
+		"splitter",
+		"mermaid",
+		"sectionx",
+		"codeblock-filename",
+		"toc",
+		"expandable-chapters"
+	],
   "localized-footer": {
     "hline": true,
     "filename": "./FOOTER.md"
-  }
+  },
+	"pluginsConfig": {
+    "search-pro": {
+        "cutWordLib": "nodejieba",
+        "defineWord" : ["Gitbook Use"]
+    },
+		"toc": {
+        "addClass": true,
+        "className": "toc"
+    },
+		"fontsettings": {
+			"theme": "white",
+			"family": "serif",
+			"size": 14
+		}
+	}
 }

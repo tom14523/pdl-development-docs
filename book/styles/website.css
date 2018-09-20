@@ -1,5 +1,5 @@
 .markdown-section table td {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 ul.summary:after {
@@ -10,4 +10,8 @@ ul.summary:after {
 
 ul.summary > li:last-child {
     display: none;
+}
+
+.markdown-section pre code {
+	font-size: 15px;
 }
