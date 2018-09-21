@@ -14,8 +14,8 @@ serve-book:
     - cd book
     - rm -rf _book/
     - rm -rf node_modules/
-    - gitbook install
-    - gitbook build
+    - /root/.nvm/versions/node/v7.7.4/bin/gitbook install
+    - /root/.nvm/versions/node/v7.7.4/bin/gitbook build
     - cd ..
     - rm -rf target
     - cp -R docker target
