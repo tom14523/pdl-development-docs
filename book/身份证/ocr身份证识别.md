@@ -1,15 +1,15 @@
 # <center><span id="ocr身份证识别">ocr身份证识别</span></center>
-
+---
 
 ## 1. 接口地址
- > /api/ocr`_`id`_`card
+ > /api/ocr_id_card
 
 ## 2. 请求参数
 
 | 参数名 | 类型 | 说明 | 是否必需 | 备注 |
 | --| -- | -- | -- | -- |
-| id`_`card`_`front`_`image   | string | 身份证正面图像           | Y | base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px，支持jpg/png/bmp格式 |
-| id`_`card`_`back`_`image    | string | 身份证背面图像            | Y | base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px，支持jpg/png/bmp格式 |
+| id_card_front_image   | string | 身份证正面图像           | Y | base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px，支持jpg/png/bmp格式 |
+| id_card_back_image    | string | 身份证背面图像            | Y | base64编码，要求base64编码后大小不超过4M，最短边至少15px，最长边最大4096px，支持jpg/png/bmp格式 |
 
 ## 3. 响应参数
 
@@ -23,7 +23,7 @@
 | nation            | string | 民族(正面信息)      | Y | 如：汉 |
 | issuing_date      | string | 签发日期(背面信息)   | Y |  |
 | birth             | string | 生日(正面信息)      | Y | 格式：yyyy-mm-dd |
-| id_name           | string | 姓名(正面信息)      | Y |  |
+| id_name           | string | 姓名(正面信息)      | Y |  ||
 
 
 
